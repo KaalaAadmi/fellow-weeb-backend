@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "freeDelivery": {
+      "type": "boolean"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "tshirt",
+        "hoodie",
+        "keychain",
+        "phone_case",
+        "mug"
+      ],
+      "required": true
+    },
+    "whatIsIncluded": {
+      "type": "blocks"
+    }
+  }
+}
